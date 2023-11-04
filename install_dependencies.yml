@@ -1,0 +1,17 @@
+---
+name: Install Dependencies on Debian
+hosts: localhost
+tasks:
+  - name: Update APT package
+    become: yes
+    apt:
+      update_cache: yes
+
+  - name: Install curl, neofetch, nvim
+    become: yes
+    apt:
+      name: 
+        - curl
+        - neofetch
+        - neovim
+      state: present
