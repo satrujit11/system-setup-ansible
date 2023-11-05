@@ -18,5 +18,5 @@
 
     - name: Install n package manager
       become: yes
-      command: curl -L https://bit.ly/n-install | bash
-      
+      shell: |
+        curl -L https://git.io/n-install | N_PREFIX=/usr/local bash -s -- -y     
