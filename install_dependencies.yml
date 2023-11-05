@@ -19,5 +19,4 @@
     - name: Install n package manager
       become: yes
       command: curl -L https://bit.ly/n-install | bash
-      creates: /root/n
       
