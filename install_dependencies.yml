@@ -17,7 +17,7 @@
         state: present
 
     - name: Install n package manager
-      command: 
-        - curl -L https://bit.ly/n-install | bash
-        - n lts
-
+      become: yes
+      command: curl -L https://bit.ly/n-install | bash
+      creates: /root/n
+      
